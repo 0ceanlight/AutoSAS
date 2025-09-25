@@ -1,23 +1,78 @@
-# AutoSAS
+# AutoSAS 🚀
 
-This project asks the user for a description of a website and then creates the basic files and files structures the user will need for that website. This project can be used to significantly speed up the website development process through the automation of the begining process. 
-## Setup
+**AutoSAS** is an AI-powered prototype that generates complete websites from natural language prompts.  
+The system asks the user to describe their website idea and automatically produces the corresponding **HTML/CSS/JavaScript** files, packaged and ready to download.  
+
+Built during a hackathon challenge, AutoSAS demonstrates how **large language models (LLMs)** can be orchestrated in a **multi-agent workflow** to automate software creation beyond boilerplate code.
+
+
+## 🔑 Key Features
+
+- **Natural Language to Code** – Users describe a website, and AutoSAS generates a functional template.  
+- **Multi-Agent LLM Pipeline** –  
+  - **Developer Agent**: generates draft website code (HTML/CSS/JS).  
+  - **Debugger Agent**: analyzes errors and regenerates corrected code.  
+- **Automated Error Handling** – Code is compiled, diagnosed, and iteratively refined for robustness.  
+- **Extensible Architecture** – While demonstrated for websites, the pipeline can generalize to other software domains.  
+- **Hackathon-Built** – Created in a fast-paced team setting, where I served as **tech lead**.  
+
+
+## ⭐️ Why It Matters
+
+Traditional website development starts with repetitive setup work. AutoSAS showcases how **AI-assisted coding** can:  
+- Accelerate development by automating scaffolding.  
+- Improve reliability with **iterative debugging loops**.  
+- Serve as a proof of concept for **AI-driven SaaS applications**.  
+
+This project highlights skills in **generative AI, prompt engineering, LLM orchestration, error diagnosis, and full-stack development** - areas with direct relevance to modern ML/AI engineering roles.
+
+
+## ⚙️ Setup
+
 This project requires the following Python packages:
 
 - Flask
 
-You can install these dependencies using the `requirements.txt` file: <code>pip install -r requirements.txt</code>
+Install dependencies using:
 
-## Usage 
-Add openAI key as enviroment variable using one of the following commands. macOS/Linux: <code>export OPENAI_API_KEY="your_api_key_here"</code> or Windows: <code>setx OPENAI_API_KEY "your_api_key_here"</code> Then run <code>python main.py</code> and ctr + left click outputted ip address. Enter website idea into textbox. Website will give you zip file for you to download. 
+```bash
+pip install -r requirements.txt
+```
 
-## Overview
 
-### Technology
+## ▶️ Usage
 
-This project uses phython flask to create and display a webpage to the user and ask for their input. It then sends the user input through ChatGPT's API to create the basic files and structure. 
+1. Add your OpenAI key as an environment variable:
 
-### Problem
+   * macOS/Linux:
 
-Website creation is often a tedious process with lots of similiar steps. This project will allow a website developer to start from a template specifically created from the input the user gives. 
+     ```bash
+     export OPENAI_API_KEY="your_api_key_here"
+     ```
+   * Windows (PowerShell):
+
+     ```powershell
+     setx OPENAI_API_KEY "your_api_key_here"
+     ```
+2. Run the app:
+
+   ```bash
+   python main.py
+   ```
+3. Open the provided local URL in your browser.
+4. Enter a description of your website idea → receive a downloadable `.zip` file with the generated code.
+
+
+## 🛠️ Technology
+
+* **Python Flask** backend for UI and API handling.
+* **OpenAI API** for LLM-driven code generation and debugging.
+* Multi-step **pipeline design** for reliability and extensibility.
+
+
+## 📌 Future Directions
+
+* Expand beyond websites to generate **end-to-end SaaS applications**.
+* Integrate deployment workflows for one-click publishing.
+* Explore reinforcement mechanisms for improving LLM code quality.
 
